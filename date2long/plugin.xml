@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="Diy"
+            visible="true"
+            id="date2long.actionSet">
+         <menu
+               label="Diy"
+               id="sampleMenu">
+            <separator
+                  name="sampleGroup">
+            </separator>
+         </menu>
+         <action
+               label="Date2Long"
+               icon="icons/sample.gif"
+               class="date2long.actions.Date2LongAction"
+               tooltip="Date2Long"
+               menubarPath="sampleMenu/sampleGroup"
+               toolbarPath="sampleGroup"
+               id="date2long.actions.Date2LongAction">
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>

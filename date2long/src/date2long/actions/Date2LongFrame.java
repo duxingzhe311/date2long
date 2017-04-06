@@ -32,7 +32,7 @@ public class Date2LongFrame {
   }
 
   public void show() {
-    shell.setText("ÈÕÆÚºÁÃë×ª»»");
+    shell.setText("æ—¥æœŸæ¯«ç§’è½¬æ¢");
     Rectangle rect = window.getBounds();
     shell.setBounds(rect.width / 2 - 100, rect.height / 2 - 100, WIDTH, HEIGHT);
     Font font = new Font(display, "Arial", 14, SWT.BOLD | SWT.ITALIC);
@@ -43,7 +43,7 @@ public class Date2LongFrame {
     shell.setLayout(gridLayOut);
     //test
     Label labMillis = new Label(shell, SWT.LEFT);
-    labMillis.setText("ºÁÃëÊı");
+    labMillis.setText("æ¯«ç§’æ•°");
     labMillis.setFont(font);
 
     Text textLong = new Text(shell, SWT.LEFT);
@@ -51,7 +51,7 @@ public class Date2LongFrame {
     textLong.setText(System.currentTimeMillis() + "");
 
     Label labelDate = new Label(shell, SWT.LEFT);
-    labelDate.setText("ÈÕÆÚ");
+    labelDate.setText("æ—¥æœŸ");
     labelDate.setFont(font);
 
     Text textDate = new Text(shell, SWT.LEFT);
@@ -59,7 +59,7 @@ public class Date2LongFrame {
     textDate.setText(DATE_FORMAT.format(new Date()));
 
     Button btn2long = new Button(shell, SWT.LEFT);
-    btn2long.setText("×ªÎªºÁÃë");
+    btn2long.setText("è½¬ä¸ºæ¯«ç§’");
     btn2long.setFont(font);
 
     btn2long.addSelectionListener(new SelectionAdapter() {
@@ -70,13 +70,13 @@ public class Date2LongFrame {
           long longVal = DATE_FORMAT.parse(strDate).getTime();
           textLong.setText(longVal + "");
         } catch (Exception e) {
-          MessageDialog.openInformation(shell, "³ö´íÁË", "³ö´íÁË" + e.getMessage());
+          MessageDialog.openInformation(shell, "å‡ºé”™äº†", "å‡ºé”™äº†" + e.getMessage());
         }
       }
     });
 
     Button btn2date = new Button(shell, SWT.CENTER);
-    btn2date.setText("×ªÎªÈÕÆÚ");
+    btn2date.setText("è½¬ä¸ºæ—¥æœŸ");
     btn2date.setFont(font);
     btn2date.addSelectionListener(new SelectionAdapter() {
       @Override
@@ -86,7 +86,7 @@ public class Date2LongFrame {
           String strDate = DATE_FORMAT.format(new Date(Long.parseLong(strLong)));
           textDate.setText(strDate);
         } catch (Exception e) {
-          MessageDialog.openInformation(shell, "³ö´íÁË", "³ö´íÁË" + e.getMessage());
+          MessageDialog.openInformation(shell, "å‡ºé”™äº†", "å‡ºé”™äº†" + e.getMessage());
         }
       }
     });
